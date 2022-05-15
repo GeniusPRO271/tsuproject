@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qD0-ce-u6W">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="Yv7-rn-sSZ">
+            <objects>
+                <viewController id="Dxx-OK-iBO" customClass="ViewController" customModule="tsuproject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9tf-Qp-Qpw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sXZ-16-KmH">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aZx-S1-OPi">
+                                        <rect key="frame" x="8" y="8" width="398" height="585"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r0J-qN-PHe">
+                                        <rect key="frame" x="8" y="601" width="398" height="160"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZb-Tn-sQg">
+                                                <rect key="frame" x="0.0" y="0.0" width="99.5" height="160"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="GreyScale"/>
+                                                <connections>
+                                                    <action selector="GreyScale:" destination="Dxx-OK-iBO" eventType="touchUpInside" id="3E9-Mh-jQj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j54-Vc-0FY">
+                                                <rect key="frame" x="99.5" y="0.0" width="99.5" height="160"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="+Contrast"/>
+                                                <connections>
+                                                    <action selector="IncreaseContrast:" destination="Dxx-OK-iBO" eventType="touchUpInside" id="ffg-r5-4Pe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJa-2d-Kfp">
+                                                <rect key="frame" x="199" y="0.0" width="99.5" height="160"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="filter3"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6O-cK-jk7">
+                                                <rect key="frame" x="298.5" y="0.0" width="99.5" height="160"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="UploadImage"/>
+                                                <connections>
+                                                    <action selector="btnImagePicker:" destination="Dxx-OK-iBO" eventType="touchUpInside" id="XsM-SF-ohA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="r0J-qN-PHe" firstAttribute="leading" secondItem="sXZ-16-KmH" secondAttribute="leading" constant="8" id="4gx-5Q-ABx"/>
+                                    <constraint firstItem="aZx-S1-OPi" firstAttribute="leading" secondItem="sXZ-16-KmH" secondAttribute="leading" constant="8" id="6iA-Lv-yFe"/>
+                                    <constraint firstAttribute="trailing" secondItem="r0J-qN-PHe" secondAttribute="trailing" constant="8" id="Amc-cD-18n"/>
+                                    <constraint firstItem="aZx-S1-OPi" firstAttribute="top" secondItem="sXZ-16-KmH" secondAttribute="top" constant="8" id="Lo1-Gm-Cmg"/>
+                                    <constraint firstAttribute="trailing" secondItem="aZx-S1-OPi" secondAttribute="trailing" constant="8" id="MuZ-X2-GPv"/>
+                                    <constraint firstItem="r0J-qN-PHe" firstAttribute="top" secondItem="aZx-S1-OPi" secondAttribute="bottom" constant="8" symbolic="YES" id="eIe-iA-pIi"/>
+                                    <constraint firstAttribute="bottom" secondItem="r0J-qN-PHe" secondAttribute="bottom" constant="8" id="hWZ-Jn-LpH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8Rb-Wk-QNV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Rb-Wk-QNV" firstAttribute="trailing" secondItem="sXZ-16-KmH" secondAttribute="trailing" id="HCK-Bn-hXU"/>
+                            <constraint firstItem="sXZ-16-KmH" firstAttribute="leading" secondItem="8Rb-Wk-QNV" secondAttribute="leading" id="Nbo-wO-F0k"/>
+                            <constraint firstItem="sXZ-16-KmH" firstAttribute="top" secondItem="8Rb-Wk-QNV" secondAttribute="top" id="bUh-qJ-8Hr"/>
+                            <constraint firstItem="8Rb-Wk-QNV" firstAttribute="bottom" secondItem="sXZ-16-KmH" secondAttribute="bottom" id="egH-0t-3HX"/>
+                            <constraint firstItem="8Rb-Wk-QNV" firstAttribute="bottom" secondItem="aZx-S1-OPi" secondAttribute="bottom" constant="176" id="tKj-nz-c7M"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" selectedImage="camera.filters" catalog="system" id="2Ag-2R-T9v"/>
+                    <connections>
+                        <outlet property="ImageViewFilter" destination="aZx-S1-OPi" id="dHl-RL-phT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EfL-6s-HZP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="704.34782608695662" y="806.91964285714278"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ESh-fh-R0g">
+            <objects>
+                <tabBarController id="qD0-ce-u6W" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wPf-DM-olw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Dxx-OK-iBO" kind="relationship" relationship="viewControllers" id="qse-7S-NXi"/>
+                        <segue destination="KTu-ts-gje" kind="relationship" relationship="viewControllers" id="JtY-ID-px3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0o2-cH-1Ne" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="123" y="70"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="EKf-Eh-9YS">
+            <objects>
+                <viewController id="KTu-ts-gje" customClass="ViewController" customModule="tsuproject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oht-Lm-7l1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNu-Wu-RxZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cC7-vZ-hx9">
+                                        <rect key="frame" x="8" y="8" width="398" height="585"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0rz-ET-ac8">
+                                        <rect key="frame" x="8" y="601" width="398" height="160"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7B2-Dh-dRK">
+                                                <rect key="frame" x="0.0" y="0.0" width="132.5" height="160"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Rotate Left 90°"/>
+                                                <connections>
+                                                    <action selector="RotateLeft:" destination="KTu-ts-gje" eventType="touchUpInside" id="fYk-0s-MJ1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyb-nW-XaN">
+                                                <rect key="frame" x="132.5" y="0.0" width="133" height="160"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="UploadImage"/>
+                                                <connections>
+                                                    <action selector="btnImagePicker:" destination="KTu-ts-gje" eventType="touchUpInside" id="Toh-Cc-ujZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUH-Qc-gfe">
+                                                <rect key="frame" x="265.5" y="0.0" width="132.5" height="160"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Rotate Right 90°"/>
+                                                <connections>
+                                                    <action selector="RotateRight:" destination="KTu-ts-gje" eventType="touchUpInside" id="uGD-Ao-vXn"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="0rz-ET-ac8" secondAttribute="bottom" constant="8" id="2bI-DV-Z5S"/>
+                                    <constraint firstAttribute="trailing" secondItem="cC7-vZ-hx9" secondAttribute="trailing" constant="8" id="5L1-or-r9W"/>
+                                    <constraint firstItem="0rz-ET-ac8" firstAttribute="leading" secondItem="UNu-Wu-RxZ" secondAttribute="leading" constant="8" id="JT2-Po-xHr"/>
+                                    <constraint firstItem="cC7-vZ-hx9" firstAttribute="leading" secondItem="UNu-Wu-RxZ" secondAttribute="leading" constant="8" id="OTq-cy-Ha5"/>
+                                    <constraint firstItem="cC7-vZ-hx9" firstAttribute="top" secondItem="UNu-Wu-RxZ" secondAttribute="top" constant="8" id="byv-Z1-e72"/>
+                                    <constraint firstAttribute="trailing" secondItem="0rz-ET-ac8" secondAttribute="trailing" constant="8" id="hiD-9C-QHi"/>
+                                    <constraint firstItem="0rz-ET-ac8" firstAttribute="top" secondItem="cC7-vZ-hx9" secondAttribute="bottom" constant="8" symbolic="YES" id="nrn-op-Vbm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cHA-yk-BZo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cHA-yk-BZo" firstAttribute="bottom" secondItem="cC7-vZ-hx9" secondAttribute="bottom" constant="176" id="Y0H-35-U8M"/>
+                            <constraint firstItem="cHA-yk-BZo" firstAttribute="bottom" secondItem="UNu-Wu-RxZ" secondAttribute="bottom" id="fX2-5C-kK8"/>
+                            <constraint firstItem="UNu-Wu-RxZ" firstAttribute="top" secondItem="cHA-yk-BZo" secondAttribute="top" id="hbY-m5-DoD"/>
+                            <constraint firstItem="cHA-yk-BZo" firstAttribute="trailing" secondItem="UNu-Wu-RxZ" secondAttribute="trailing" id="tp1-oR-Ddy"/>
+                            <constraint firstItem="UNu-Wu-RxZ" firstAttribute="leading" secondItem="cHA-yk-BZo" secondAttribute="leading" id="wQU-kX-mmM"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" selectedImage="camera.filters" catalog="system" id="sKR-Zz-Abf"/>
+                    <connections>
+                        <outlet property="ImageViewFilter" destination="cC7-vZ-hx9" id="8D9-y0-urt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WLT-OL-rcn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-371" y="807"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera.filters" catalog="system" width="128" height="116"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
