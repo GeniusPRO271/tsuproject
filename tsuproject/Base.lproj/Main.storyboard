@@ -3,12 +3,14 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--ImageFilter-->
         <scene sceneID="Yv7-rn-sSZ">
             <objects>
                 <viewController id="Dxx-OK-iBO" customClass="ViewController" customModule="tsuproject" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,39 +21,55 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sXZ-16-KmH">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aZx-S1-OPi">
-                                        <rect key="frame" x="8" y="8" width="398" height="585"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aZx-S1-OPi">
+                                        <rect key="frame" x="8" y="130" width="398" height="360"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r0J-qN-PHe">
                                         <rect key="frame" x="8" y="601" width="398" height="160"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZb-Tn-sQg">
-                                                <rect key="frame" x="0.0" y="0.0" width="99.5" height="160"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="132.5" height="160"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="GreyScale"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Greyscale"/>
                                                 <connections>
                                                     <action selector="GreyScale:" destination="Dxx-OK-iBO" eventType="touchUpInside" id="3E9-Mh-jQj"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j54-Vc-0FY">
-                                                <rect key="frame" x="99.5" y="0.0" width="99.5" height="160"/>
+                                                <rect key="frame" x="132.5" y="0.0" width="133" height="160"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="+Contrast"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Contrast"/>
                                                 <connections>
                                                     <action selector="IncreaseContrast:" destination="Dxx-OK-iBO" eventType="touchUpInside" id="ffg-r5-4Pe"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJa-2d-Kfp">
-                                                <rect key="frame" x="199" y="0.0" width="99.5" height="160"/>
+                                                <rect key="frame" x="265.5" y="0.0" width="132.5" height="160"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="filter3"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Negative"/>
+                                                <connections>
+                                                    <action selector="Brighnes:" destination="Dxx-OK-iBO" eventType="touchUpInside" id="DoA-nS-jXv"/>
+                                                </connections>
                                             </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JgI-Oe-tJF">
+                                        <rect key="frame" x="90" y="562" width="235" height="31"/>
+                                        <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6O-cK-jk7">
-                                                <rect key="frame" x="298.5" y="0.0" width="99.5" height="160"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="117.5" height="31"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="UploadImage"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Upload"/>
                                                 <connections>
                                                     <action selector="btnImagePicker:" destination="Dxx-OK-iBO" eventType="touchUpInside" id="XsM-SF-ohA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuT-HV-kbH">
+                                                <rect key="frame" x="117.5" y="0.0" width="117.5" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Original Image"/>
+                                                <connections>
+                                                    <action selector="OriginalImage:" destination="Dxx-OK-iBO" eventType="touchUpInside" id="yqY-OW-kIp"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -79,7 +97,7 @@
                             <constraint firstItem="8Rb-Wk-QNV" firstAttribute="bottom" secondItem="aZx-S1-OPi" secondAttribute="bottom" constant="176" id="tKj-nz-c7M"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" selectedImage="camera.filters" catalog="system" id="2Ag-2R-T9v"/>
+                    <tabBarItem key="tabBarItem" title="ImageFilter" selectedImage="camera.filters" catalog="system" id="2Ag-2R-T9v"/>
                     <connections>
                         <outlet property="ImageViewFilter" destination="aZx-S1-OPi" id="dHl-RL-phT"/>
                     </connections>
@@ -100,13 +118,14 @@
                     <connections>
                         <segue destination="Dxx-OK-iBO" kind="relationship" relationship="viewControllers" id="qse-7S-NXi"/>
                         <segue destination="KTu-ts-gje" kind="relationship" relationship="viewControllers" id="JtY-ID-px3"/>
+                        <segue destination="vCc-3L-E55" kind="relationship" relationship="viewControllers" id="QXE-BQ-8CS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0o2-cH-1Ne" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="123" y="70"/>
         </scene>
-        <!--Item 2-->
+        <!--ImageRotation-->
         <scene sceneID="EKf-Eh-9YS">
             <objects>
                 <viewController id="KTu-ts-gje" customClass="ViewController" customModule="tsuproject" customModuleProvider="target" sceneMemberID="viewController">
@@ -117,9 +136,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNu-Wu-RxZ">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cC7-vZ-hx9">
-                                        <rect key="frame" x="8" y="8" width="398" height="585"/>
-                                    </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0rz-ET-ac8">
                                         <rect key="frame" x="8" y="601" width="398" height="160"/>
                                         <subviews>
@@ -134,7 +150,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyb-nW-XaN">
                                                 <rect key="frame" x="132.5" y="0.0" width="133" height="160"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="UploadImage"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Upload"/>
                                                 <connections>
                                                     <action selector="btnImagePicker:" destination="KTu-ts-gje" eventType="touchUpInside" id="Toh-Cc-ujZ"/>
                                                 </connections>
@@ -149,6 +165,9 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cC7-vZ-hx9">
+                                        <rect key="frame" x="8" y="120" width="398" height="370"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -172,18 +191,101 @@
                             <constraint firstItem="UNu-Wu-RxZ" firstAttribute="leading" secondItem="cHA-yk-BZo" secondAttribute="leading" id="wQU-kX-mmM"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" selectedImage="camera.filters" catalog="system" id="sKR-Zz-Abf"/>
+                    <tabBarItem key="tabBarItem" title="ImageRotation" id="sKR-Zz-Abf">
+                        <color key="badgeColor" name="AccentColor"/>
+                        <imageReference key="selectedImage" image="rotate.right.fill" catalog="system" symbolScale="small"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="ImageViewFilter" destination="cC7-vZ-hx9" id="8D9-y0-urt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WLT-OL-rcn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-371" y="807"/>
+            <point key="canvasLocation" x="-371.01449275362324" y="806.91964285714278"/>
+        </scene>
+        <!--ImageScaling-->
+        <scene sceneID="IlN-1r-JgJ">
+            <objects>
+                <viewController id="vCc-3L-E55" customClass="ViewController" customModule="tsuproject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hof-r7-srg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0GK-he-0ZY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="510"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="410-oW-zlm">
+                                        <rect key="frame" x="8" y="121" width="398" height="369"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="410-oW-zlm" firstAttribute="leading" secondItem="0GK-he-0ZY" secondAttribute="leading" constant="8" id="Cmj-De-ULS"/>
+                                    <constraint firstItem="410-oW-zlm" firstAttribute="top" secondItem="0GK-he-0ZY" secondAttribute="top" constant="8" id="bIm-6e-eDm"/>
+                                    <constraint firstAttribute="trailing" secondItem="410-oW-zlm" secondAttribute="trailing" constant="8" id="d70-Jl-ph4"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" placeholder="Hight" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ETb-bi-ZJe">
+                                <rect key="frame" x="20" y="688" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" placeholder="Width" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nkl-qx-KhH">
+                                <rect key="frame" x="297" y="688" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHb-fM-dzy">
+                                <rect key="frame" x="147" y="678" width="111" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="APPLY"/>
+                                <connections>
+                                    <action selector="ApplySize:" destination="vCc-3L-E55" eventType="touchUpInside" id="FAJ-FH-jBQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OS-Ir-5ZQ">
+                                <rect key="frame" x="136" y="597" width="132" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="UploadImage"/>
+                                <connections>
+                                    <action selector="btnImagePicker:" destination="vCc-3L-E55" eventType="touchUpInside" id="2Th-OX-xxI"/>
+                                    <action selector="btnImagePicker:" destination="Dxx-OK-iBO" eventType="touchUpInside" id="IWp-GL-o85"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="V4h-5U-4wW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="V4h-5U-4wW" firstAttribute="bottom" secondItem="410-oW-zlm" secondAttribute="bottom" constant="176" id="09m-zs-tsF"/>
+                            <constraint firstItem="V4h-5U-4wW" firstAttribute="bottom" secondItem="0GK-he-0ZY" secondAttribute="bottom" id="GdG-GD-D1E"/>
+                            <constraint firstItem="0GK-he-0ZY" firstAttribute="leading" secondItem="V4h-5U-4wW" secondAttribute="leading" id="Hbi-ZD-SRf"/>
+                            <constraint firstItem="V4h-5U-4wW" firstAttribute="trailing" secondItem="0GK-he-0ZY" secondAttribute="trailing" id="YSZ-UL-tRa"/>
+                            <constraint firstItem="0GK-he-0ZY" firstAttribute="top" secondItem="V4h-5U-4wW" secondAttribute="top" id="z8m-8Y-Wnu"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ImageScaling" selectedImage="crop" catalog="system" id="tq4-Nz-Iro"/>
+                    <connections>
+                        <outlet property="HightInput" destination="ETb-bi-ZJe" id="mdE-GP-VKT"/>
+                        <outlet property="ImageViewFilter" destination="410-oW-zlm" id="tNy-RX-uCh"/>
+                        <outlet property="WidthInput" destination="nkl-qx-KhH" id="Qbw-4M-GcQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fgc-eg-jvb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1262.3188405797102" y="806.91964285714278"/>
         </scene>
     </scenes>
     <resources>
         <image name="camera.filters" catalog="system" width="128" height="116"/>
+        <image name="crop" catalog="system" width="128" height="116"/>
+        <image name="rotate.right.fill" catalog="system" width="118" height="128"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

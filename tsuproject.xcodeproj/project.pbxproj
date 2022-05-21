@@ -16,8 +16,8 @@
 		CB88ADF72830DB8A0042587C /* tsuprojectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88ADF62830DB8A0042587C /* tsuprojectTests.swift */; };
 		CB88AE012830DB8A0042587C /* tsuprojectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88AE002830DB8A0042587C /* tsuprojectUITests.swift */; };
 		CB88AE032830DB8A0042587C /* tsuprojectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88AE022830DB8A0042587C /* tsuprojectUITestsLaunchTests.swift */; };
-		D2D5A1DE2830E82D00DE8927 /* ImageScaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D5A1DB2830E82D00DE8927 /* ImageScaling.swift */; };
-		D2D5A1DF2830E82D00DE8927 /* ImageRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D5A1DC2830E82D00DE8927 /* ImageRotation.swift */; };
+		D25EFA41283877C700FAE83F /* ImageRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EFA40283877C700FAE83F /* ImageRotation.swift */; };
+		D25EFA43283877DD00FAE83F /* ImageScaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EFA42283877DD00FAE83F /* ImageScaling.swift */; };
 		D2D5A1E02830E82D00DE8927 /* ImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D5A1DD2830E82D00DE8927 /* ImageFilter.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,8 +52,8 @@
 		CB88ADFC2830DB8A0042587C /* tsuprojectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tsuprojectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB88AE002830DB8A0042587C /* tsuprojectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tsuprojectUITests.swift; sourceTree = "<group>"; };
 		CB88AE022830DB8A0042587C /* tsuprojectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tsuprojectUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		D2D5A1DB2830E82D00DE8927 /* ImageScaling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageScaling.swift; path = ../../TSU_App/TSU_App/ImageScaling.swift; sourceTree = "<group>"; };
-		D2D5A1DC2830E82D00DE8927 /* ImageRotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageRotation.swift; path = ../../TSU_App/TSU_App/ImageRotation.swift; sourceTree = "<group>"; };
+		D25EFA40283877C700FAE83F /* ImageRotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageRotation.swift; path = tsuproject/ImageRotation.swift; sourceTree = SOURCE_ROOT; };
+		D25EFA42283877DD00FAE83F /* ImageScaling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScaling.swift; sourceTree = "<group>"; };
 		D2D5A1DD2830E82D00DE8927 /* ImageFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageFilter.swift; path = ../../TSU_App/ImageFilter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,8 +109,8 @@
 				CB88ADE12830DB880042587C /* SceneDelegate.swift */,
 				CB88ADE32830DB880042587C /* ViewController.swift */,
 				D2D5A1DD2830E82D00DE8927 /* ImageFilter.swift */,
-				D2D5A1DC2830E82D00DE8927 /* ImageRotation.swift */,
-				D2D5A1DB2830E82D00DE8927 /* ImageScaling.swift */,
+				D25EFA40283877C700FAE83F /* ImageRotation.swift */,
+				D25EFA42283877DD00FAE83F /* ImageScaling.swift */,
 				CB88ADE52830DB880042587C /* Main.storyboard */,
 				CB88ADE82830DB8A0042587C /* Assets.xcassets */,
 				CB88ADEA2830DB8A0042587C /* LaunchScreen.storyboard */,
@@ -204,6 +204,7 @@
 				TargetAttributes = {
 					CB88ADDB2830DB880042587C = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1330;
 					};
 					CB88ADF12830DB8A0042587C = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -267,12 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2D5A1DF2830E82D00DE8927 /* ImageRotation.swift in Sources */,
+				D25EFA41283877C700FAE83F /* ImageRotation.swift in Sources */,
 				CB88ADE42830DB880042587C /* ViewController.swift in Sources */,
-				D2D5A1DE2830E82D00DE8927 /* ImageScaling.swift in Sources */,
 				D2D5A1E02830E82D00DE8927 /* ImageFilter.swift in Sources */,
 				CB88ADE02830DB880042587C /* AppDelegate.swift in Sources */,
 				CB88ADE22830DB880042587C /* SceneDelegate.swift in Sources */,
+				D25EFA43283877DD00FAE83F /* ImageScaling.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +387,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 			};
 			name = Debug;
 		};
@@ -440,6 +442,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -449,11 +452,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RMWZH63P7T;
+				DEVELOPMENT_TEAM = 267U9TFXNQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = tsuproject/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Tsuproyect;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app wants to add photo";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "this app uses photo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -464,9 +471,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-badi.tsuproject";
+				PRODUCT_BUNDLE_IDENTIFIER = "-tsuproyect";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -477,11 +486,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RMWZH63P7T;
+				DEVELOPMENT_TEAM = 267U9TFXNQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = tsuproject/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Tsuproyect;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app wants to add photo";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "this app uses photo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -492,9 +505,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-badi.tsuproject";
+				PRODUCT_BUNDLE_IDENTIFIER = "-tsuproyect";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
