@@ -18,7 +18,7 @@
 		CB88AE032830DB8A0042587C /* tsuprojectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB88AE022830DB8A0042587C /* tsuprojectUITestsLaunchTests.swift */; };
 		D25EFA41283877C700FAE83F /* ImageRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EFA40283877C700FAE83F /* ImageRotation.swift */; };
 		D25EFA43283877DD00FAE83F /* ImageScaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EFA42283877DD00FAE83F /* ImageScaling.swift */; };
-		D2D5A1E02830E82D00DE8927 /* ImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D5A1DD2830E82D00DE8927 /* ImageFilter.swift */; };
+		D28841FD2838BEF4002B7F1D /* ImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28841FC2838BEF4002B7F1D /* ImageFilter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 		CB88AE022830DB8A0042587C /* tsuprojectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tsuprojectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D25EFA40283877C700FAE83F /* ImageRotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageRotation.swift; path = tsuproject/ImageRotation.swift; sourceTree = SOURCE_ROOT; };
 		D25EFA42283877DD00FAE83F /* ImageScaling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScaling.swift; sourceTree = "<group>"; };
-		D2D5A1DD2830E82D00DE8927 /* ImageFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageFilter.swift; path = ../../TSU_App/ImageFilter.swift; sourceTree = "<group>"; };
+		D28841FC2838BEF4002B7F1D /* ImageFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +108,8 @@
 				CB88ADDF2830DB880042587C /* AppDelegate.swift */,
 				CB88ADE12830DB880042587C /* SceneDelegate.swift */,
 				CB88ADE32830DB880042587C /* ViewController.swift */,
-				D2D5A1DD2830E82D00DE8927 /* ImageFilter.swift */,
 				D25EFA40283877C700FAE83F /* ImageRotation.swift */,
+				D28841FC2838BEF4002B7F1D /* ImageFilter.swift */,
 				D25EFA42283877DD00FAE83F /* ImageScaling.swift */,
 				CB88ADE52830DB880042587C /* Main.storyboard */,
 				CB88ADE82830DB8A0042587C /* Assets.xcassets */,
@@ -270,10 +270,10 @@
 			files = (
 				D25EFA41283877C700FAE83F /* ImageRotation.swift in Sources */,
 				CB88ADE42830DB880042587C /* ViewController.swift in Sources */,
-				D2D5A1E02830E82D00DE8927 /* ImageFilter.swift in Sources */,
 				CB88ADE02830DB880042587C /* AppDelegate.swift in Sources */,
 				CB88ADE22830DB880042587C /* SceneDelegate.swift in Sources */,
 				D25EFA43283877DD00FAE83F /* ImageScaling.swift in Sources */,
+				D28841FD2838BEF4002B7F1D /* ImageFilter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
